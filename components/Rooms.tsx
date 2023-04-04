@@ -1,15 +1,15 @@
-import { useState } from 'react';
-import { Box, Tab, Tabs } from '@mui/material';
-import TabPanel from './util/TabPanel';
-import SearchableRooms from './SearchableRooms';
-import RoomType from '../types/RoomType';
+import { useState } from 'react'
+import { Box, Tab, Tabs } from '@mui/material'
+import TabPanel from './util/TabPanel'
+import SearchableRooms from './SearchableRooms'
+import RoomType from '../types/RoomType'
 
 export default function Rooms({ rooms }: { rooms: RoomType[] }) {
   
-  const [tabValue, setTabValue] = useState(0);
+  const [tabValue, setTabValue] = useState(0)
   const handleTabChange = (event: any, newTabValue: number) => {
-    setTabValue(newTabValue);
-  };
+    setTabValue(newTabValue)
+  }
 
   const vacantRooms = rooms.filter(room => room.isVacant)
   const occupiedRooms = rooms.filter(room => !room.isVacant)
@@ -30,7 +30,6 @@ export default function Rooms({ rooms }: { rooms: RoomType[] }) {
       <TabPanel value={tabValue} index={1}>
         <SearchableRooms rooms={occupiedRooms}></SearchableRooms>
       </TabPanel>
-
     </>
-  );
+  )
 }

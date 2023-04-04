@@ -1,8 +1,8 @@
-import { Box } from "@mui/system";
+import { Box } from "@mui/system"
 
 
 export default function TabPanel(props: { [x: string]: any; children: any; value: any; index: any; }) {
-  const { children, value, index, ...other } = props;
+  const { children, value, index, ...other } = props
   return (
     <div
       role="tabpanel"
@@ -17,5 +17,5 @@ export default function TabPanel(props: { [x: string]: any; children: any; value
         </Box>
       )}
     </div>
-  );
+  )
 }

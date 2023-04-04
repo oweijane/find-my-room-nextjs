@@ -1,3 +1,3 @@
 # Find My Room
 
-Build using Next.js. Deployed using AWS Amplify.
+Built using Next.js. Deployed using AWS Amplify.

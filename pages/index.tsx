@@ -1,19 +1,11 @@
-import Rooms from "@/components/Rooms";
-import RoomType from "@/types/RoomType";
-import Link from "next/link";
+import Rooms from "@/components/Rooms"
+import RoomType from "@/types/RoomType"
 
 export default function Home({ rooms }: { rooms: RoomType[] }) {
   return (
     <>
       <h1>Home</h1>
       <Rooms rooms={rooms} />
-
-      <p>
-        <Link href="/ssr">View a SSR page.</Link>
-      </p>
-      <p>
-        <Link href="/ssg">View a SSG page.</Link>
-      </p>
     </>
   )
 }

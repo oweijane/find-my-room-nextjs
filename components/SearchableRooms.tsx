@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import Room from './Room';
-import { List, TextField } from '@mui/material';
-import RoomType from '../types/RoomType';
+import React, { useState } from 'react'
+import Room from './Room'
+import { List, TextField } from '@mui/material'
+import RoomType from '../types/RoomType'
 
 
 export default function SearchableRooms({ rooms }: { rooms: RoomType[] }) {
-  const [filteredRooms, setFilteredRooms] = useState(rooms);
+  const [filteredRooms, setFilteredRooms] = useState(rooms)
   // const [prevRooms, setPrevRooms] = useState(null);
 
   // if (rooms !== prevRooms) {
@@ -15,12 +15,12 @@ export default function SearchableRooms({ rooms }: { rooms: RoomType[] }) {
   // }
   
   const handleInputChange = (event: any) => {
-    const inputValue = event.target.value;
+    const inputValue = event.target.value
     const filtered = rooms.filter((item) =>
       item.id.toLowerCase().includes(inputValue.toLowerCase())
-    );
+    )
     setFilteredRooms(filtered);
-  };
+  }
 
   return (
     <>
@@ -36,5 +36,5 @@ export default function SearchableRooms({ rooms }: { rooms: RoomType[] }) {
         ))}
       </List>
     </>
-  );
+  )
 }
