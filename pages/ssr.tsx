@@ -8,8 +8,13 @@ export default function SSR({ formattedDate }: { formattedDate: string }) {
       <p>
         This page is server-side rendered. It was rendered on {formattedDate}.
       </p>
+
       <p>
-        <Link href="/">View a static page.</Link>
+        <Link href="/">View Home page.</Link>
+      </p>
+      
+      <p>
+        <Link href="/ssg">View a static page.</Link>
       </p>
     </>
   );
